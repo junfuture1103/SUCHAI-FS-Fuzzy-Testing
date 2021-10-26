@@ -13,7 +13,6 @@ def get_mem_info(pid):
     print(values)
     vsize = values[22]
     rss = values[23]
-
     vsize_kb = int(vsize) / 1024.0
     page_size_kb = os.sysconf("SC_PAGE_SIZE") / 1024.0
     rss_kb = int(rss) * page_size_kb
