@@ -94,6 +94,8 @@ class RandomSequenceFuzzer(RandomFuzzer):
                 params = " ".join(params)
                 seq.append(cmd + " " + params)
             sequences.append(seq)
+        
+        print("sequences in generate_seqs : ", sequences)
         return sequences
 
     def run(self, runner=FlightSoftwareRunner()):

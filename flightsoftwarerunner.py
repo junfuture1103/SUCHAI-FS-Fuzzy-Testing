@@ -7,7 +7,8 @@ import time
 
 class FlightSoftwareRunner(Runner):
     def __init__(self, exec_cmd="./SUCHAI_Flight_Software"):
-        self.exec_cmd = exec_cmd
+        # self.exec_cmd = exec_cmd
+        self.exec_cmd = "/home/jun20/suchai-flight-software/build/apps/simple/suchai-app"
 
     def run_process(self, cmds_list=[], params_list=[]):
         """

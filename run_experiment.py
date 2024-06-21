@@ -116,9 +116,12 @@ def run_experiment(random_fuzzer, iterations=10, cmds_number=10, csv_path='', js
     # Run zmqhub.py (tcp)
     ex_zmqhub = Popen(["python3", "zmqhub.py", "--mon"], stdin=PIPE)
 
-    # Set variables
-    exec_dir = "../../Git/suchai-flight-software4/build_groundstation/"
-    exec_cmd = "./SUCHAI_Flight_Software"
+    # Set variables (default)
+    # exec_dir = "../../Git/suchai-flight-software4/build_groundstation/"
+    # exec_cmd = "./SUCHAI_Flight_Software"
+
+    exec_dir = "/home/jun20/suchai-flight-software/build/apps/simple"
+    exec_cmd = "./suchai-app"
 
     # Run flight software sending n_cmds random commands with 1 random parameter
     prev_dir = os.getcwd()
@@ -178,6 +181,7 @@ def main(time_path, csv_path, json_path, iterations, commands_number, min_length
     :param commands_file: String. Filename with the SUCHAI Flight Software commands and parameters type.
     :return:
     """
+    print("==== start ====")
     # Create file to write execution time for each iteration
     curr_time = time.strftime("%Y%m%d-%H%M%S")
 
